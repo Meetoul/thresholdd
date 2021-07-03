@@ -1,0 +1,12 @@
+#!/bin/sh
+
+CHARGE_START_THRESHOLD=40
+CHARGE_END_THRESHOLD=80
+
+CHARGE_START_THRESHOLD_FILE=/sys/class/power_supply/BAT0/charge_control_start_threshold
+CHARGE_END_THRESHOLD_FILE=/sys/class/power_supply/BAT0/charge_control_end_threshold
+
+echo "$CHARGE_START_THRESHOLD" > "$CHARGE_START_THRESHOLD_FILE"
+echo "$CHARGE_END_THRESHOLD" > "$CHARGE_END_THRESHOLD_FILE"
+
+sleep infinity
